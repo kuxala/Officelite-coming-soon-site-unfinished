@@ -3,6 +3,7 @@ import Card from "./components/Card";
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import CardWhite from "./components/CardWhite";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
           text2="VIP support"
         />
       </div>
+      <Footer />
     </>
   );
 }
