@@ -6,6 +6,22 @@ const Footerr = styled.footer`
   color: #fff;
   padding-bottom: 50px;
 `;
+const AllDiv = styled.div`
+  @media only screen and (min-width: 768px) {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+`;
+const TwoDiv = styled.div`
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+`;
 const TextDiv = styled.div`
   padding-top: 100px;
   display: flex;
@@ -118,30 +134,33 @@ function Footer() {
   return (
     <>
       <Footerr>
-        <div>
-          <TextDiv>
-            <P>COMING Soon</P>
-          </TextDiv>
-          <TimerDiv>
-            <Timer>
-              <Span>{days}</Span>
-              <TimerP>Days</TimerP>
-            </Timer>
-            <Timer>
-              <Span>{hours}</Span>
-              <TimerP>Hours</TimerP>
-            </Timer>
-            <Timer>
-              <Span>{minutes}</Span>
-              <TimerP>Minutes</TimerP>
-            </Timer>
-            <Timer>
-              <Span>{seconds}</Span>
-              <TimerP>Seconds</TimerP>
-            </Timer>
-          </TimerDiv>
+        <AllDiv>
+          <TwoDiv>
+            <TextDiv>
+              <P>COMING Soon</P>
+            </TextDiv>
+
+            <TimerDiv>
+              <Timer>
+                <Span>{days}</Span>
+                <TimerP>Days</TimerP>
+              </Timer>
+              <Timer>
+                <Span>{hours}</Span>
+                <TimerP>Hours</TimerP>
+              </Timer>
+              <Timer>
+                <Span>{minutes}</Span>
+                <TimerP>Minutes</TimerP>
+              </Timer>
+              <Timer>
+                <Span>{seconds}</Span>
+                <TimerP>Seconds</TimerP>
+              </Timer>
+            </TimerDiv>
+          </TwoDiv>
           <Button>Get Started</Button>
-        </div>
+        </AllDiv>
       </Footerr>
     </>
   );

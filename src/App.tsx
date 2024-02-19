@@ -4,13 +4,23 @@ import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import CardWhite from "./components/CardWhite";
 import Footer from "./components/Footer";
+import styled from "styled-components";
+const CardComponents = styled.div`
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+`;
 function App() {
   return (
     <>
       <Header />
       <MainPage />
 
-      <div>
+      <CardComponents>
         <Card
           plan="Basic"
           price="Free"
@@ -35,7 +45,7 @@ function App() {
           text="Robust work management"
           text2="VIP support"
         />
-      </div>
+      </CardComponents>
       <Footer />
     </>
   );

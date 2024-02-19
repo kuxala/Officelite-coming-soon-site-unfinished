@@ -11,6 +11,9 @@ const CardContainer = styled.div`
   border-radius: 13px;
   background: #fff;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.25);
+  /* max-width: 400px;
+  max-height: 508px;
+  flex-shrink: 0; */
 `;
 const Span = styled.span`
   padding: 20px 0;
