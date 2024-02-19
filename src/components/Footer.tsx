@@ -98,6 +98,13 @@ const Button = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 28px; /* 175% */
+  @media only screen and (min-width: 768px) {
+    margin-top: 10%;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 function Footer() {
   const [time, setTime] = useState<any>();

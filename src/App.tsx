@@ -5,6 +5,8 @@ import MainPage from "./components/MainPage";
 import CardWhite from "./components/CardWhite";
 import Footer from "./components/Footer";
 import styled from "styled-components";
+import "animate.css/animate.min.css";
+
 const CardComponents = styled.div`
   @media only screen and (min-width: 768px) {
     display: flex;
@@ -20,7 +22,7 @@ function App() {
       <Header />
       <MainPage />
 
-      <CardComponents>
+      <CardComponents className="animate__animated animate__fadeInUp">
         <Card
           plan="Basic"
           price="Free"

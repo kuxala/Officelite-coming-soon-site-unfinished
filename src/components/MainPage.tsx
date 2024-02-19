@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import "animate.css";
 const Container = styled.div`
   display: flex;
   flex-direction: column-reverse;
@@ -78,6 +78,9 @@ const Button = styled.button`
   @media only screen and (min-width: 768px) {
     margin: 0;
   }
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 const ButtonDiv = styled.div`
@@ -91,7 +94,7 @@ function MainPage() {
   return (
     <>
       <Container>
-        <LeftCol>
+        <LeftCol className="animate__animated animate__fadeInLeft">
           <H1>A simple solution to complex tasks is coming soon</H1>
           <P>
             Say goodbye to inefficient juggling of multiple apps, teams, and
@@ -102,7 +105,7 @@ function MainPage() {
             <Button>Get Started</Button>
           </ButtonDiv>
         </LeftCol>
-        <RightCol>
+        <RightCol className="animate__animated animate__fadeInRight">
           <img src="../../assets/page.svg" />
         </RightCol>
       </Container>

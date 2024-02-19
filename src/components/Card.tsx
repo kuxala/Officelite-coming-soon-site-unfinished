@@ -73,6 +73,9 @@ const Button = styled.button`
   line-height: 28px; /* 175% */
   margin-top: 20px;
   margin-bottom: 40px;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 function Card({
   plan,
