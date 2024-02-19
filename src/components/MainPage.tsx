@@ -5,14 +5,28 @@ const Container = styled.div`
   flex-direction: column-reverse;
   max-width: 80%;
   margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    margin-top: 200px;
+  }
 `;
 const LeftCol = styled.div`
   padding-top: 24px;
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+  }
 `;
 const RightCol = styled.div`
   display: flex;
   margin: 0 auto;
   margin-top: 80px;
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+    justify-content: center;
+    height: 400px;
+    margin-top: 0px;
+  }
 `;
 const H1 = styled.h1`
   color: #333950;
@@ -22,6 +36,11 @@ const H1 = styled.h1`
   font-style: normal;
   font-weight: 700;
   line-height: 48px; /* 120% */
+  @media only screen and (min-width: 768px) {
+    max-width: 540px;
+    text-align: left;
+    margin: 0 auto;
+  }
 `;
 const P = styled.p`
   color: #747b95;
@@ -32,6 +51,11 @@ const P = styled.p`
   font-weight: 400;
   line-height: 26px; /* 162.5% */
   padding: 24px 0;
+  @media only screen and (min-width: 768px) {
+    max-width: 540px;
+    text-align: left;
+    margin: 0 auto;
+  }
 `;
 const Button = styled.button`
   display: flex;
@@ -51,6 +75,17 @@ const Button = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 28px; /* 175% */
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+  }
+`;
+
+const ButtonDiv = styled.div`
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    margin: 0 auto;
+    max-width: 540px;
+  }
 `;
 function MainPage() {
   return (
@@ -63,7 +98,9 @@ function MainPage() {
             projects. Officelite is the new collaboration platform built with an
             intuitive interface to improve productivity.
           </P>
-          <Button>Get Started</Button>
+          <ButtonDiv>
+            <Button>Get Started</Button>
+          </ButtonDiv>
         </LeftCol>
         <RightCol>
           <img src="../../assets/page.svg" />
